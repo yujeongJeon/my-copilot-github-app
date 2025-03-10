@@ -1,0 +1,12 @@
+{
+    "name": "github-app-webcontainer",
+    "version": "0.0.0",
+    "engines": {
+        "node": "^22",
+        "pnpm": "^10"
+    },
+    "packageManager": "pnpm@10.6.2",
+    "dependencies": {
+        "probot": "^13.4.4"
+    }
+}
