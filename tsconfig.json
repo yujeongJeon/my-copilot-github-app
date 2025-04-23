@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "target": "ESNext",
+        "baseUrl": ".",
+        "strict": true,
+        "outDir": "dist",
+        "moduleResolution": "Bundler",
+        "module": "ESNext",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "paths": {
+            "$/*": ["./src/*"]
+        }
+    },
+    "include": ["./*.ts"],
+    "exclude": ["node_modules", "dist"]
+}

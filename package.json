@@ -1,12 +1,18 @@
 {
     "name": "github-app-webcontainer",
     "version": "0.0.0",
+    "dependencies": {
+        "probot": "^13.4.5"
+    },
+    "devDependencies": {
+        "@naverpay/eslint-config": "^2.2.5",
+        "@naverpay/prettier-config": "^1.0.1",
+        "eslint": "^9.25.1",
+        "typescript": "^5.8.3"
+    },
+    "packageManager": "pnpm@10.6.2",
     "engines": {
         "node": "^22",
         "pnpm": "^10"
-    },
-    "packageManager": "pnpm@10.6.2",
-    "dependencies": {
-        "probot": "^13.4.4"
     }
 }
