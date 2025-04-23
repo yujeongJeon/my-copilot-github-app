@@ -1,6 +1,28 @@
 {
     "name": "github-app-webcontainer",
     "version": "0.0.0",
+    "scripts": {
+        "build": "tsc -p tsconfig.build.json",
+        "fix": "pnpm lint:fix && pnpm prettier",
+        "lint": "eslint '**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,yaml,yml}'",
+        "lint:fix": "eslint '**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,yaml,yml}' --fix",
+        "prettier": "prettier --write '**/*.{json,yaml,md,ts,tsx,js,jsx}'",
+        "start": "probot run ./dist/index.js",
+        "watch": "nodemon"
+    },
+    "nodemonConfig": {
+        "watch": [
+            "**/*.ts",
+            ".env"
+        ],
+        "ext": "ts,js,env",
+        "ignore": [
+            "dist",
+            "node_modules"
+        ],
+        "exec": "pnpm build && pnpm start",
+        "delay": "1500"
+    },
     "dependencies": {
         "probot": "^13.4.5"
     },
@@ -8,6 +30,7 @@
         "@naverpay/eslint-config": "^2.2.5",
         "@naverpay/prettier-config": "^1.0.1",
         "eslint": "^9.25.1",
+        "nodemon": "^3.1.10",
         "typescript": "^5.8.3"
     },
     "packageManager": "pnpm@10.6.2",

@@ -12,3 +12,8 @@ export default (app: Probot) => {
         app.log.error(error)
     })
 }
+
+process.on('SIGTERM', () => {
+    console.log('SIGTERM received, shutting down gracefully')
+    process.exit(0)
+})
