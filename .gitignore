@@ -27,11 +27,6 @@ jspm_packages/
 # Output of 'npm pack'
 *.tgz
 
-# Optional lock files
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
 # Optional coverage directory
 coverage/
 

@@ -5,7 +5,7 @@
         "baseUrl": ".",
         "strict": true,
         "outDir": "dist",
-        "moduleResolution": "Bundler",
+        "moduleResolution": "node",
         "module": "ESNext",
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
@@ -13,9 +13,9 @@
         "allowJs": true,
         "resolveJsonModule": true,
         "paths": {
-            "$/*": ["./src/*"]
+            "$/*": ["./*"]
         }
     },
-    "include": ["./*.ts"],
+    "include": ["*.ts"],
     "exclude": ["node_modules", "dist"]
 }
