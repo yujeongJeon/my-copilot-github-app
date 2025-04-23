@@ -1,1 +1,1 @@
-# github-app-webcontainer
+# github-app template
