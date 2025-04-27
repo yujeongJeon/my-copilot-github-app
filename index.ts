@@ -62,18 +62,18 @@ function app(app: Probot, {getRouter}: ApplicationFunctionOptions) {
 
         // 3. Responses API 프롬프트 구성
         const input = `
-    다음은 Pull Request의 커밋 히스토리입니다:
-    ${commitSummaries.join('\n')}
-    
-    ${urlContents.length > 0 ? `커밋 메시지에 포함된 URL의 내용:\n${urlContents.join('\n\n')}` : ''}
-    
-    이 정보를 바탕으로 PR의 제목과 본문을 명확하고 친절하게 추천해줘.
-    URL을 조회할 수 있으면 조회해서 그 내용도 본문에 포함해줘.
-    
-    출력은 다음 포맷을 따라줘:
-    제목: (추천 제목)
-    본문: (추천 본문)
-        `.trim()
+다음은 Pull Request의 커밋 히스토리입니다:
+${commitSummaries.join('\n')}
+
+${urlContents.length > 0 ? `커밋 메시지에 포함된 URL의 내용:\n${urlContents.join('\n\n')}` : ''}
+
+이 정보를 바탕으로 PR의 제목과 본문을 명확하고 친절하게 추천해줘.
+URL을 조회할 수 있으면 조회해서 그 내용도 본문에 포함해줘.
+
+출력은 다음 포맷을 따라줘:
+제목: (추천 제목)
+본문: (추천 본문)
+`.trim()
 
         // 4. OpenAI Responses API 호출 (openai@4.x)
         const response = await getOpenAI().responses.create({
