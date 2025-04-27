@@ -1,6 +1,7 @@
 import {App, Octokit} from 'octokit'
 import jwt from 'jsonwebtoken'
 import {createAppAuth} from '@octokit/auth-app'
+import OpenAI from 'openai'
 
 class JwtGenerator {
     static generate({appId, privateKey}: {appId: string; privateKey: string}) {
@@ -135,4 +136,15 @@ export const getInstallationOctokit = (installationId: number) => {
     })
 
     return octokit
+}
+
+export const getOpenAI = () => {
+    const OPENAI_API_KEY = process.env.OPENAI_API_KEY || ''
+
+    const openai = new OpenAI({
+        apiKey: OPENAI_API_KEY,
+        timeout: 3000,
+    })
+
+    return openai
 }
