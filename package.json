@@ -24,11 +24,17 @@
         "delay": "1500"
     },
     "dependencies": {
+        "@octokit/auth-app": "^7.2.1",
+        "body-parser": "^1.20.3",
+        "jsonwebtoken": "^9.0.2",
+        "octokit": "<3.2.1",
         "probot": "^13.4.5"
     },
     "devDependencies": {
         "@naverpay/eslint-config": "^2.2.5",
         "@naverpay/prettier-config": "^1.0.1",
+        "@types/body-parser": "^1.19.5",
+        "@types/jsonwebtoken": "^9.0.9",
         "eslint": "^9.25.1",
         "nodemon": "^3.1.10",
         "smee-client": "^3.1.1",
